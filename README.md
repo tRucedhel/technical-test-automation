@@ -18,9 +18,11 @@ apabila belum terinstall syarat dari curl dan jq
 4. chmod +x script/data_collection.sh
 5. crontab -e
 6. setelah menampilakn editor nano dari crontab, masukkan script berikut 
+```
 0 8,12,15 * * * "lokasi_file_data_collection.sh"  >> /home/cron/data_collection.log 2>&1
 0 2 * * * "lokasi_file_data_clean.sh" >> /home/cron/data_clean.log 2>&1
-7. simpan dan tutup editor nano dari crontab
+```
+8. simpan dan tutup editor nano dari crontab
 
 ##informasi
 1. setelah jam 08:00, atau 12:00, atau 15:00 periksa direktori pada home/cron
