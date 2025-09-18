@@ -13,7 +13,7 @@ apabila belum terinstall syarat dari curl dan jq
 
 ##cara menjalankan :
 1. masuk ke terminal/bash 
-2. git clone "https://github.com/tRucedhel/technical-test-automation.git
+2. git clone "https://github.com/tRucedhel/technical-test-automation.git"
 3. chmod +x script/data_clean.sh
 4. chmod +x script/data_collection.sh
 5. crontab -e
