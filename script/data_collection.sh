@@ -6,11 +6,13 @@ lokasi_file="$simpan_file/$nama_file"
 
 mkdir -p "$simpan_file"
 
+#ubah sumber data sesuai dengan resource yang dituju
 sumber_data="https://dummyjson.com/products"
 
 echo "info : Pengumpulan data pada $(date)"   
 echo "info : Data tersimpan pada $lokasi_file"
 
+#ubah data apa saja yang ingin di ambil
 curl -s "$sumber_data" | jq -r '["id", "title", "brand", "price"], (.products[] | [.id, .title, .brand, .price]) | @csv' > "$lokasi_file"
 
 if [ $? -eq 0 ]; then
