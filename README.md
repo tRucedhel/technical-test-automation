@@ -14,15 +14,18 @@ apabila belum terinstall syarat dari curl dan jq
 ##cara menjalankan :
 1. masuk ke terminal/bash 
 2. git clone "https://github.com/tRucedhel/technical-test-automation.git"
-3. chmod +x script/data_clean.sh
-4. chmod +x script/data_collection.sh
-5. crontab -e
-6. setelah menampilakn editor nano dari crontab, masukkan script berikut 
+3. cd /technical-test-automation/script
+4. nano data_collection.sh
+   - ubah sumber data, dan data yang ingin diambil pada script data_collection.sh
+5. chmod +x script/data_clean.sh
+6. chmod +x script/data_collection.sh
+7. crontab -e
+8. setelah menampilakn editor nano dari crontab, masukkan script berikut
 ```
 0 8,12,15 * * * "lokasi_file_data_collection.sh"  >> /home/cron/data_collection.log 2>&1
 0 2 * * * "lokasi_file_data_clean.sh" >> /home/cron/data_clean.log 2>&1
 ```
-8. simpan dan tutup editor nano dari crontab
+9. simpan dan tutup editor nano dari crontab
 
 ##informasi
 1. setelah jam 08:00, atau 12:00, atau 15:00 periksa direktori pada home/cron
